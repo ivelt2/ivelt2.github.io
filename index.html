@@ -182,7 +182,7 @@ function updateUrl() {
   var base_url = "https://www.ivelt.com/forum/search.php?st=0&sk=t&sd=d&sr=topics&search_id=unreadposts";
   var checkboxes = document.querySelectorAll("input[type=checkbox]:checked");
   for(var i = 0; i < checkboxes.length; i++) {
-    base_url += "&fid[]=" + checkboxes[i].value;
+    base_url += "&fid%5b%5d=" + checkboxes[i].value;
   }
   document.getElementById('url').textContent = base_url;
 }
