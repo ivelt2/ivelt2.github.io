@@ -176,6 +176,11 @@
     <input type="checkbox" id="142" class="Main2" value="142" onchange="updateUrl()">אייוועלט פרעזענטירט<br>
   </details>
 
+  <p>זוך אין סאבפארומס?</p>
+<input type="radio" id="subforumYes" name="subforumSearch" value="1" checked> יא<br>
+<input type="radio" id="subforumNo" name="subforumSearch" value="0"> ניין<br>
+
+
   <!--
       <button onclick="updateUrl()">Update URL</button>
 
@@ -189,37 +194,46 @@
 </body>
 <script>
 
-  function updateUrl() {
-    var base_url = "https://www.ivelt.com/forum/search.php?st=0&sk=t&sd=d&sr=topics&search_id=unreadposts";
-    var checkboxes = document.querySelectorAll("input[type=checkbox]");
-    for (var i = 0; i < checkboxes.length; i++) {
-      // Save the state of this checkbox in local storage
-      localStorage.setItem(checkboxes[i].id, checkboxes[i].checked);
+function updateUrl() {
+    var subforumSearch = document.querySelector('input[name="subforumSearch"]:checked').value;
+    var base_url = "https://www.ivelt.com/forum/search.php?st=0&sc=" + subforumSearch + "&sk=t&sd=d&sr=topics&search_id=unreadposts";
 
-      // Add to URL if checked
-      if (checkboxes[i].checked) {
-        base_url += "&fid%5b%5d=" + checkboxes[i].value;
-      }
+    var checkboxes = document.querySelectorAll("input[type=checkbox]");
+    for(var i = 0; i < checkboxes.length; i++) {
+        localStorage.setItem(checkboxes[i].id, checkboxes[i].checked);
+
+        if(checkboxes[i].checked) {
+            base_url += "&fid%5b%5d=" + checkboxes[i].value;
+        }
     }
     document.getElementById('url').textContent = base_url;
-  }
+}
 
-  function loadCheckboxes() {
+function loadCheckboxes() {
     var checkboxes = document.querySelectorAll("input[type=checkbox]");
-    for (var i = 0; i < checkboxes.length; i++) {
-      var isChecked = localStorage.getItem(checkboxes[i].id) == 'true' ? true : false;
-      checkboxes[i].checked = isChecked;
+    for(var i = 0; i < checkboxes.length; i++) {
+        var isChecked = localStorage.getItem(checkboxes[i].id) == 'true' ? true : false;
+        checkboxes[i].checked = isChecked;
     }
-    // Update the URL after loading the checkbox states
+
+    // Load radio button state
+    var subforumSearch = localStorage.getItem('subforumSearch');
+    if(subforumSearch !== null) {
+        document.getElementById('subforum' + (subforumSearch == '1' ? 'Yes' : 'No')).checked = true;
+    }
+
     updateUrl();
-  }
+}
+
 
   function checkAll(category) {
+    var subforumSearch = document.querySelector('input[name="subforumSearch"]:checked').value;
+    localStorage.setItem('subforumSearch', subforumSearch);
     var isChecked = document.getElementById(category).checked;
     var checkboxes = document.querySelectorAll("." + category);
     for (var i = 0; i < checkboxes.length; i++) {
       checkboxes[i].checked = isChecked;
-    }
+        }
   }
   function selectAll(category) {
     var selectAllCheckbox = document.querySelector("#selectAll" + category);
@@ -234,9 +248,10 @@
   }
 
   function goToUrl() {
-    var urlField = document.getElementById('url');
-    window.location.href = urlField.value;
-  }
+    var url = document.getElementById('url').textContent;
+    window.open(url, '_blank');
+}
+
 
   function copyToClipboard() {
     var urlField = document.getElementById('url');
@@ -251,7 +266,9 @@
     // Alert the copied text
     alert("Copied the URL: " + urlField.value);
   }
-
+  
+  document.getElementById('subforumYes').addEventListener('change', updateUrl);
+  document.getElementById('subforumNo').addEventListener('change', updateUrl);
   window.onload = loadCheckboxes; 
 </script>
 
