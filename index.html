@@ -102,6 +102,10 @@
       float: right;
       padding: 0px 15px;
     }
+
+    li {
+      list-style: none;
+    }
   </style>
 </head>
 
@@ -118,155 +122,235 @@
       <p>איר קענט אוועקלייגן די לינק אלס א בוקמארק</p>
       <div class="aaa">
         <details>
-          <summary><input type="checkbox" id="158" class="Main" value="158" onchange="updateUrl()"> אידישע וועלט א<br>
+          <summary><input type="checkbox" id="selectAllMain" onchange="selectAll('Main')"> אידישע וועלט א</br>
           </summary>
-          <input type="checkbox" id="selectAllMain" onchange="selectAll('Main')"> וועלט אויס אלע<br>
-          <input type="checkbox" id="33" class="Main" value="33" onchange="updateUrl()">ברוכים הבאים<br>
-          <input type="checkbox" id="189" class="Main" value="189" onchange="updateUrl()">רעוואלוציע<br>
+          <ul>
+            <li><input type="checkbox" id="33" class="Main" value="33" onchange="updateUrl()">ברוכים הבאים</br></li>
+            <li><input type="checkbox" id="189" class="Main" value="189" onchange="updateUrl()">רעוואלוציע</br></li>
+          </ul>
         </details>
 
         <details>
-          <summary><input type="checkbox" id="182" class="News" value="182" onchange="updateUrl()">נייעס<br></summary>
-          <input type="checkbox" id="selectAllNews" onchange="selectAll('News')"> וועלט אויס אלע<br>
-          <input type="checkbox" id="6" class="News" value="6" onchange="updateUrl()">וועלטליכע נייעס<br>
-          <input type="checkbox" id="104" class="News" value="104" onchange="updateUrl()">קאראנא וויירוס<br>
-          <input type="checkbox" id="183" class="News" value="183" onchange="updateUrl()">פאליטישע נייעס<br>
-          <input type="checkbox" id="110" class="News" value="110" onchange="updateUrl()">נייעס קאך לעפל<br>
-          <input type="checkbox" id="120" class="News" value="120" onchange="updateUrl()">וואלן רעזולטאטן<br>
-          <input type="checkbox" id="184" class="News" value="184" onchange="updateUrl()">עקאנאמישע נייעס<br>
-          <input type="checkbox" id="185" class="News" value="185" onchange="updateUrl()">היימישע נייעס<br>
-          <input type="checkbox" id="98" class="News" value="98" onchange="updateUrl()">ישוב העולם - דירות און
-          ישובים<br>
-          <input type="checkbox" id="88" class="News" value="88" onchange="updateUrl()">אקטועלע נייעס<br>
+          <summary><input type="checkbox" id="selectAllNews" onchange="selectAll('News')">נייעס</br></summary>
+          <ul>
+            <li><input type="checkbox" id="6" class="News" value="6" onchange="updateUrl()">וועלטליכע נייעס</br></li>
+            <ul>
+              <li><input type="checkbox" id="104" class="News" value="104" onchange="updateUrl()">קאראנא וויירוס</br>
+              </li>
+            </ul>
+            <li><input type="checkbox" id="183" class="News" value="183" onchange="updateUrl()">פאליטישע נייעס</br></li>
+            <ul>
+              <li><input type="checkbox" id="110" class="News" value="110" onchange="updateUrl()">נייעס קאך לעפל</br>
+              </li>
+              <li><input type="checkbox" id="120" class="News" value="120" onchange="updateUrl()">וואלן רעזולטאטן</br>
+              </li>
+            </ul>
+            <li><input type="checkbox" id="184" class="News" value="184" onchange="updateUrl()">עקאנאמישע נייעס</br>
+            </li>
+            <li><input type="checkbox" id="185" class="News" value="185" onchange="updateUrl()">היימישע נייעס</br></li>
+            <ul>
+              <li><input type="checkbox" id="98" class="News" value="98" onchange="updateUrl()">ישוב העולם - דירות און
+                ישובים</br></li>
+              <li><input type="checkbox" id="88" class="News" value="88" onchange="updateUrl()">אקטועלע נייעס</br></li>
+            </ul>
+          </ul>
         </details>
 
         <details>
-          <summary><input type="checkbox" id="34" class="Kretc" value="34" onchange="updateUrl()">די היימישע קרעטשמע<br>
+          <summary><input type="checkbox" id="selectAllKretc" onchange="selectAll('Kretc')">די היימישע קרעטשמע</br>
           </summary>
-          <input type="checkbox" id="selectAllKretc" onchange="selectAll('Kretc')"> וועלט אויס אלע<br>
-          <input type="checkbox" id="152" class="Kretc" value="152" onchange="updateUrl()">דעת הקהל<br>
-          <input type="checkbox" id="3" class="Kretc" value="3" onchange="updateUrl()">היימישע קרעטשמע<br>
-          <input type="checkbox" id="153" class="Kretc" value="153" onchange="updateUrl()">ידיעות און וויסנשאפט<br>
-          <input type="checkbox" id="73" class="Kretc" value="73" onchange="updateUrl()">היימישע דזשורנאל<br>
-          <input type="checkbox" id="96" class="Kretc" value="96" onchange="updateUrl()">פאעזיע און גראמען<br>
-          <input type="checkbox" id="139" class="Kretc" value="139" onchange="updateUrl()">אונטערהאלטונג<br>
-          <input type="checkbox" id="21" class="Kretc" value="21" onchange="updateUrl()">היימישע פארברענגן<br>
-          <input type="checkbox" id="13" class="Kretc" value="13" onchange="updateUrl()">שטים בודקע<br>
-          <input type="checkbox" id="106" class="Kretc" value="106" onchange="updateUrl()">אנקעטעס<br>
-          <input type="checkbox" id="63" class="Kretc" value="63" onchange="updateUrl()">זכור ימות עולם<br>
-          <input type="checkbox" id="133" class="Kretc" value="133" onchange="updateUrl()">שפראך, גראמאטיק און דקדוק<br>
-          <input type="checkbox" id="134" class="Kretc" value="134" onchange="updateUrl()">היכל הנגינה<br>
-          <input type="checkbox" id="136" class="Kretc" value="136" onchange="updateUrl()">שירי קודש<br>
-          <input type="checkbox" id="138" class="Kretc" value="138" onchange="updateUrl()">תורת הנגינה און כלי שיר<br>
-          <input type="checkbox" id="140" class="Kretc" value="140" onchange="updateUrl()">חזנות ווינקל<br>
-          <input type="checkbox" id="135" class="Kretc" value="135" onchange="updateUrl()">היימישע אויסגאבעס און נייעס
-          קוועלער<br>
-          <input type="checkbox" id="187" class="Kretc" value="187" onchange="updateUrl()">קול מבשר<br>
+          <ul>
+            <li><input type="checkbox" id="152" class="Kretc" value="152" onchange="updateUrl()">דעת הקהל</br></li>
+            <li><input type="checkbox" id="3" class="Kretc" value="3" onchange="updateUrl()">היימישע קרעטשמע</br></li>
+            <ul>
+              <li><input type="checkbox" id="153" class="Kretc" value="153" onchange="updateUrl()">ידיעות און
+                וויסנשאפט</br></li>
+              <li><input type="checkbox" id="73" class="Kretc" value="73" onchange="updateUrl()">היימישע דזשורנאל</br>
+              </li>
+            </ul>
+            <li><input type="checkbox" id="96" class="Kretc" value="96" onchange="updateUrl()">פאעזיע און גראמען</br>
+            </li>
+            <li><input type="checkbox" id="139" class="Kretc" value="139" onchange="updateUrl()">אונטערהאלטונג</br></li>
+            <li><input type="checkbox" id="21" class="Kretc" value="21" onchange="updateUrl()">היימישע פארברענגן</br>
+            </li>
+            <ul>
+              <li><input type="checkbox" id="13" class="Kretc" value="13" onchange="updateUrl()">שטים בודקע</br></li>
+              <li><input type="checkbox" id="106" class="Kretc" value="106" onchange="updateUrl()">אנקעטעס</br></li>
+            </ul>
+            <li><input type="checkbox" id="63" class="Kretc" value="63" onchange="updateUrl()">זכור ימות עולם</br></li>
+            <li><input type="checkbox" id="133" class="Kretc" value="133" onchange="updateUrl()">שפראך, גראמאטיק און
+              דקדוק</br></li>
+            <li><input type="checkbox" id="134" class="Kretc" value="134" onchange="updateUrl()">היכל הנגינה</br></li>
+            <ul>
+              <li><input type="checkbox" id="136" class="Kretc" value="136" onchange="updateUrl()">שירי קודש</br></li>
+              <li><input type="checkbox" id="138" class="Kretc" value="138" onchange="updateUrl()">תורת הנגינה און כלי
+                שיר</br></li>
+              <li><input type="checkbox" id="140" class="Kretc" value="140" onchange="updateUrl()">חזנות ווינקל</br>
+              </li>
+            </ul>
+            <li><input type="checkbox" id="135" class="Kretc" value="135" onchange="updateUrl()">היימישע אויסגאבעס און
+              נייעס קוועלער</br></li>
+            <ul>
+              <li><input type="checkbox" id="187" class="Kretc" value="187" onchange="updateUrl()">קול מבשר</br></li>
+            </ul>
+          </ul>
         </details>
 
         <details>
-          <summary><input type="checkbox" id="35" class="BM" value="35" onchange="updateUrl()">בית המדרש דקהלתינו<br>
+          <summary><input type="checkbox" id="selectAllBM" onchange="selectAll('BM')">בית המדרש דקהלתינו</br>
           </summary>
-          <input type="checkbox" id="selectAllBM" onchange="selectAll('BM')"> וועלט אויס אלע<br>
-          <input type="checkbox" id="92" class="BM" value="92" onchange="updateUrl()">שיעורי הקהילות<br>
-          <input type="checkbox" id="95" class="BM" value="95" onchange="updateUrl()">יסודי התורה<br>
-          <input type="checkbox" id="94" class="BM" value="94" onchange="updateUrl()">זכרו - ישראל ואורייתא<br>
-          <input type="checkbox" id="93" class="BM" value="93" onchange="updateUrl()">תורתך שעשועי<br>
-          <input type="checkbox" id="12" class="BM" value="12" onchange="updateUrl()">שיעור הקרעטשמע - בית יאנאש<br>
-          <input type="checkbox" id="5" class="BM" value="5" onchange="updateUrl()">ידיעות התורה<br>
-          <input type="checkbox" id="4" class="BM" value="4" onchange="updateUrl()">מדי שבת בשבתו ומועד במועדו<br>
-          <input type="checkbox" id="151" class="BM" value="151" onchange="updateUrl()">אז נדברו<br>
-          <input type="checkbox" id="31" class="BM" value="31" onchange="updateUrl()">על הצדיקים ועל החסידים<br>
-          <input type="checkbox" id="54" class="BM" value="54" onchange="updateUrl()">ועל פליטת בית סופריהם<br>
-          <input type="checkbox" id="23" class="BM" value="23" onchange="updateUrl()">אוצר הספרים<br>
-          <input type="checkbox" id="97" class="BM" value="97" onchange="updateUrl()">מפעל הוצאת ספרים<br>
+          <ul>
+            <li><input type="checkbox" id="92" class="BM" value="92" onchange="updateUrl()">שיעורי הקהילות</br></li>
+            <ul>
+              <li><input type="checkbox" id="95" class="BM" value="95" onchange="updateUrl()">יסודי התורה</br></li>
+              <li><input type="checkbox" id="94" class="BM" value="94" onchange="updateUrl()">זכרו - ישראל ואורייתא</br>
+              </li>
+              <li><input type="checkbox" id="93" class="BM" value="93" onchange="updateUrl()">תורתך שעשועי</br></li>
+              <li><input type="checkbox" id="12" class="BM" value="12" onchange="updateUrl()">שיעור הקרעטשמע - בית
+                יאנאש</br></li>
+            </ul>
+            <li><input type="checkbox" id="5" class="BM" value="5" onchange="updateUrl()">ידיעות התורה</br></li>
+            <ul>
+              <li><input type="checkbox" id="4" class="BM" value="4" onchange="updateUrl()">מדי שבת בשבתו ומועד
+                במועדו</br>
+              </li>
+            </ul>
+            <li><input type="checkbox" id="151" class="BM" value="151" onchange="updateUrl()">אז נדברו</br></li>
+            <li><input type="checkbox" id="31" class="BM" value="31" onchange="updateUrl()">על הצדיקים ועל החסידים</br>
+            </li>
+            <li><input type="checkbox" id="54" class="BM" value="54" onchange="updateUrl()">ועל פליטת בית סופריהם</br>
+            </li>
+            <ul>
+              <li><input type="checkbox" id="23" class="BM" value="23" onchange="updateUrl()">אוצר הספרים</br></li>
+              <li><input type="checkbox" id="97" class="BM" value="97" onchange="updateUrl()">מפעל הוצאת ספרים</br></li>
+            </ul>
+          </ul>
         </details>
 
         <details>
-          <summary><input type="checkbox" id="37" class="ish" value="37" onchange="updateUrl()">איש את רעהו יעזורו<br>
+          <summary><input type="checkbox" id="selectAllish" onchange="selectAll('ish')">איש את רעהו יעזורו</br>
           </summary>
-          <input type="checkbox" id="selectAllish" onchange="selectAll('ish')"> וועלט אויס אלע<br>
-          <input type="checkbox" id="25" class="ish" value="25" onchange="updateUrl()">ולאחיו יאמר חזק<br>
-          <input type="checkbox" id="155" class="ish" value="155" onchange="updateUrl()">תורת הנפש<br>
-          <input type="checkbox" id="159" class="ish" value="159" onchange="updateUrl()">חנוך לנער<br>
-          <input type="checkbox" id="71" class="ish" value="71" onchange="updateUrl()">געזונטהייט<br>
-          <input type="checkbox" id="118" class="ish" value="118" onchange="updateUrl()">פינאנץ<br>
-          <input type="checkbox" id="160" class="ish" value="160" onchange="updateUrl()">דינא דמלכותא<br>
-          <input type="checkbox" id="161" class="ish" value="161" onchange="updateUrl()">צדקה וחסד<br>
-          <input type="checkbox" id="162" class="ish" value="162" onchange="updateUrl()">משא ומתן<br>
-          <input type="checkbox" id="163" class="ish" value="163" onchange="updateUrl()">מאכלים<br>
-          <input type="checkbox" id="164" class="ish" value="164" onchange="updateUrl()">מלבושים<br>
-          <input type="checkbox" id="165" class="ish" value="165" onchange="updateUrl()">האוזוועיר<br>
-          <input type="checkbox" id="166" class="ish" value="166" onchange="updateUrl()">אנליין שאפינג<br>
-          <input type="checkbox" id="167" class="ish" value="167" onchange="updateUrl()">דירת קבע<br>
-          <input type="checkbox" id="168" class="ish" value="168" onchange="updateUrl()">מענעדזשמענט<br>
-          <input type="checkbox" id="169" class="ish" value="169" onchange="updateUrl()">קאנסטראקשן<br>
-          <input type="checkbox" id="69" class="ish" value="69" onchange="updateUrl()">אויטאס און אלעס ארום<br>
-          <input type="checkbox" id="170" class="ish" value="170" onchange="updateUrl()">קאר דילערשיפ<br>
-          <input type="checkbox" id="171" class="ish" value="171" onchange="updateUrl()">קאר הילף<br>
-          <input type="checkbox" id="117" class="ish" value="117" onchange="updateUrl()">טרעוול און וואקאציע<br>
-          <input type="checkbox" id="172" class="ish" value="172" onchange="updateUrl()">לאקאלע טרעוול<br>
-          <input type="checkbox" id="173" class="ish" value="173" onchange="updateUrl()">אויספלוגן<br>
-          <input type="checkbox" id="174" class="ish" value="174" onchange="updateUrl()">וואקאציע<br>
-          <input type="checkbox" id="175" class="ish" value="175" onchange="updateUrl()">פלי רייזעס<br>
-          <input type="checkbox" id="176" class="ish" value="176" onchange="updateUrl()">אייראפע<br>
-          <input type="checkbox" id="177" class="ish" value="177" onchange="updateUrl()">ארץ ישראל<br>
-          <input type="checkbox" id="178" class="ish" value="178" onchange="updateUrl()">פארשידענע הילף<br>
-          <input type="checkbox" id="179" class="ish" value="179" onchange="updateUrl()">מועדים וזמנים<br>
-          <input type="checkbox" id="180" class="ish" value="180" onchange="updateUrl()">שמחות<br>
-          <input type="checkbox" id="26" class="ish" value="26" onchange="updateUrl()">ביזנעס<br>
-          <input type="checkbox" id="56" class="ish" value="56" onchange="updateUrl()">טעכנאלאגיע און ערפינדונגען<br>
-          <input type="checkbox" id="57" class="ish" value="57" onchange="updateUrl()">טעכנאלאגיע<br>
-          <input type="checkbox" id="59" class="ish" value="59" onchange="updateUrl()">סעלפאונס און טעבלעטס<br>
-          <input type="checkbox" id="60" class="ish" value="60" onchange="updateUrl()">בלעקבערי ווינקל<br>
-          <input type="checkbox" id="81" class="ish" value="81" onchange="updateUrl()">ענדרויד ווינקל<br>
-          <input type="checkbox" id="61" class="ish" value="61" onchange="updateUrl()">אלע אשכולות אויפאיינמאל<br>
-          <input type="checkbox" id="27" class="ish" value="27" onchange="updateUrl()">קאמפיוטער און פראגרעמינג<br>
-          <input type="checkbox" id="46" class="ish" value="46" onchange="updateUrl()">ווינדאוס און מעק<br>
-          <input type="checkbox" id="47" class="ish" value="47" onchange="updateUrl()">אוידיא און ווידעאו<br>
-          <input type="checkbox" id="49" class="ish" value="49" onchange="updateUrl()">מייקראסאפט ווארד<br>
-          <input type="checkbox" id="51" class="ish" value="51" onchange="updateUrl()">מייקראסאפט עקסעל / עקסעס<br>
-          <input type="checkbox" id="52" class="ish" value="52" onchange="updateUrl()">הארדווער, פראגרעמס, און
-          פארשידענס<br>
-          <input type="checkbox" id="70" class="ish" value="70" onchange="updateUrl()">דעוועלאופערס ווינקל<br>
-          <input type="checkbox" id="55" class="ish" value="55" onchange="updateUrl()">אלע אשכולות אויפאיינמאל<br>
-          <input type="checkbox" id="58" class="ish" value="58" onchange="updateUrl()">בילדער, גראפיקס און דעזיין<br>
-          <input type="checkbox" id="75" class="ish" value="75" onchange="updateUrl()">אלע אשכולות פון איש את רעהו
-          יעזורו
-          אפטיילונג אויפאיינמאל<br>
+          <ul>
+            <li><input type="checkbox" id="25" class="ish" value="25" onchange="updateUrl()">ולאחיו יאמר חזק</br></li>
+            <ul>
+              <li><input type="checkbox" id="155" class="ish" value="155" onchange="updateUrl()">תורת הנפש</br></li>
+              <li><input type="checkbox" id="159" class="ish" value="159" onchange="updateUrl()">חנוך לנער</br></li>
+            </ul>
+            <li><input type="checkbox" id="71" class="ish" value="71" onchange="updateUrl()">געזונטהייט</br></li>
+            <li><input type="checkbox" id="118" class="ish" value="118" onchange="updateUrl()">פינאנץ</br></li>
+            <ul>
+              <li><input type="checkbox" id="160" class="ish" value="160" onchange="updateUrl()">דינא דמלכותא</br></li>
+              <li><input type="checkbox" id="161" class="ish" value="161" onchange="updateUrl()">צדקה וחסד</br></li>
+            </ul>
+            <li><input type="checkbox" id="162" class="ish" value="162" onchange="updateUrl()">משא ומתן</br></li>
+            <ul>
+              <li><input type="checkbox" id="163" class="ish" value="163" onchange="updateUrl()">מאכלים</br></li>
+              <li><input type="checkbox" id="164" class="ish" value="164" onchange="updateUrl()">מלבושים</br></li>
+              <li><input type="checkbox" id="165" class="ish" value="165" onchange="updateUrl()">האוזוועיר</br></li>
+              <li><input type="checkbox" id="166" class="ish" value="166" onchange="updateUrl()">אנליין שאפינג</br></li>
+            </ul>
+            <li><input type="checkbox" id="167" class="ish" value="167" onchange="updateUrl()">דירת קבע</br></li>
+            <ul>
+              <li><input type="checkbox" id="168" class="ish" value="168" onchange="updateUrl()">מענעדזשמענט</br></li>
+              <li><input type="checkbox" id="169" class="ish" value="169" onchange="updateUrl()">קאנסטראקשן</br></li>
+            </ul>
+            <li><input type="checkbox" id="69" class="ish" value="69" onchange="updateUrl()">אויטאס און אלעס ארום</br>
+            </li>
+            <ul>
+              <li><input type="checkbox" id="170" class="ish" value="170" onchange="updateUrl()">קאר דילערשיפ</br></li>
+              <li><input type="checkbox" id="171" class="ish" value="171" onchange="updateUrl()">קאר הילף</br></li>
+            </ul>
+            <li><input type="checkbox" id="117" class="ish" value="117" onchange="updateUrl()">טרעוול און וואקאציע</br>
+            </li>
+            <ul>
+              <li><input type="checkbox" id="172" class="ish" value="172" onchange="updateUrl()">לאקאלע טרעוול</br></li>
+              <li><input type="checkbox" id="173" class="ish" value="173" onchange="updateUrl()">אויספלוגן</br></li>
+              <li><input type="checkbox" id="174" class="ish" value="174" onchange="updateUrl()">וואקאציע</br></li>
+              <li><input type="checkbox" id="175" class="ish" value="175" onchange="updateUrl()">פלי רייזעס</br></li>
+              <li><input type="checkbox" id="176" class="ish" value="176" onchange="updateUrl()">אייראפע</br></li>
+              <li><input type="checkbox" id="177" class="ish" value="177" onchange="updateUrl()">ארץ ישראל</br></li>
+            </ul>
+            <li><input type="checkbox" id="178" class="ish" value="178" onchange="updateUrl()">פארשידענע הילף</br></li>
+            <ul>
+              <li><input type="checkbox" id="179" class="ish" value="179" onchange="updateUrl()">מועדים וזמנים</br></li>
+              <li><input type="checkbox" id="180" class="ish" value="180" onchange="updateUrl()">שמחות</br></li>
+            </ul>
+            <li><input type="checkbox" id="26" class="ish" value="26" onchange="updateUrl()">ביזנעס</br></li>
+            <li><input type="checkbox" id="56" class="ish" value="56" onchange="updateUrl()">טעכנאלאגיע און
+              ערפינדונגען</br></li>
+            <ul>
+              <li><input type="checkbox" id="57" class="ish" value="57" onchange="updateUrl()">טעכנאלאגיע</br></li>
+              <li><input type="checkbox" id="59" class="ish" value="59" onchange="updateUrl()">סעלפאונס און טעבלעטס</br>
+              </li>
+              <li><input type="checkbox" id="60" class="ish" value="60" onchange="updateUrl()">בלעקבערי ווינקל</br></li>
+              <li><input type="checkbox" id="81" class="ish" value="81" onchange="updateUrl()">ענדרויד ווינקל</br></li>
+              <li><input type="checkbox" id="61" class="ish" value="61" onchange="updateUrl()">אלע אשכולות
+                אויפאיינמאל</br></li>
+            </ul>
+            <li><input type="checkbox" id="27" class="ish" value="27" onchange="updateUrl()">קאמפיוטער און
+              פראגרעמינג</br>
+            </li>
+            <ul>
+              <li><input type="checkbox" id="46" class="ish" value="46" onchange="updateUrl()">ווינדאוס און מעק</br>
+              </li>
+              <li><input type="checkbox" id="47" class="ish" value="47" onchange="updateUrl()">אוידיא און ווידעאו</br>
+              </li>
+              <li><input type="checkbox" id="49" class="ish" value="49" onchange="updateUrl()">מייקראסאפט ווארד</br>
+              </li>
+              <li><input type="checkbox" id="51" class="ish" value="51" onchange="updateUrl()">מייקראסאפט עקסעל /
+                עקסעס</br></li>
+              <li><input type="checkbox" id="52" class="ish" value="52" onchange="updateUrl()">הארדווער, פראגרעמס, און
+                פארשידענס</br></li>
+              <li><input type="checkbox" id="70" class="ish" value="70" onchange="updateUrl()">דעוועלאופערס ווינקל</br>
+              </li>
+              <li><input type="checkbox" id="55" class="ish" value="55" onchange="updateUrl()">אלע אשכולות
+                אויפאיינמאל</br></li>
+            </ul>
+            <li><input type="checkbox" id="58" class="ish" value="58" onchange="updateUrl()">בילדער, גראפיקס און
+              דעזיין</br></li>
+            <li><input type="checkbox" id="75" class="ish" value="75" onchange="updateUrl()">אלע אשכולות פון איש את רעהו
+              יעזורו
+              אפטיילונג אויפאיינמאל</br></li>
+          </ul>
         </details>
 
         <details>
-          <summary><input type="checkbox" id="33" class="Main2" value="33" onchange="updateUrl()">אידישע וועלט<br>
+          <summary><input type="checkbox" id="selectAllMain2" onchange="selectAll('Main2')">אידישע וועלט</br>
           </summary>
-          <input type="checkbox" id="selectAllMain2" onchange="selectAll('Main2')"> וועלט אויס אלע<br>
-
-          <input type="checkbox" id="1" class="Main2" value="1" onchange="updateUrl()">אידישע וועלט<br>
-          <input type="checkbox" id="105" class="Main2" value="105" onchange="updateUrl()">פארמעסטן<br>
-          <input type="checkbox" id="116" class="Main2" value="116" onchange="updateUrl()">תחיית המתים קאמפיין<br>
-          <input type="checkbox" id="2" class="Main2" value="2" onchange="updateUrl()">טעכנישע ווינקל<br>
-          <input type="checkbox" id="154" class="Main2" value="154" onchange="updateUrl()">מפתחות<br>
-          <input type="checkbox" id="142" class="Main2" value="142" onchange="updateUrl()">אייוועלט פרעזענטירט<br>
+          <ul>
+            <li><input type="checkbox" id="1" class="Main2" value="1" onchange="updateUrl()">אידישע וועלט</br></li>
+            <ul>
+              <li><input type="checkbox" id="105" class="Main2" value="105" onchange="updateUrl()">פארמעסטן</br></li>
+              <li><input type="checkbox" id="116" class="Main2" value="116" onchange="updateUrl()">תחיית המתים
+                קאמפיין</br>
+              </li>
+            </ul>
+            <li><input type="checkbox" id="2" class="Main2" value="2" onchange="updateUrl()">טעכנישע ווינקל</br></li>
+            <li><input type="checkbox" id="154" class="Main2" value="154" onchange="updateUrl()">מפתחות</br></li>
+            <li><input type="checkbox" id="142" class="Main2" value="142" onchange="updateUrl()">אייוועלט
+              פרעזענטירט</br>
+            </li>
+          </ul>
         </details>
       </div>
       <p>זוך אין סאבפארומס?</p>
-      <input type="radio" id="subforumYes" name="subforumSearch" value="1" checked> יא<br>
-      <input type="radio" id="subforumNo" name="subforumSearch" value="0"> ניין<br>
+      <input type="radio" id="subforumYes" name="subforumSearch" value="1" checked> יא</br>
+      <input type="radio" id="subforumNo" name="subforumSearch" value="0"> ניין</br>
 
       <p> וועלט אויס וועלכע זוך</p>
       <input type="radio" id="unreadposts" name="searchType" value="unreadposts" onchange="updateUrl()" checked>
-      אומגעליינטע תגובות<br>
+      אומגעליינטע תגובות</br>
       <input type="radio" id="unanswered" name="searchType" value="unanswered" onchange="updateUrl()"> אומגעענטפערטע
-      אשכולות<br>
-      <input type="radio" id="newposts" name="searchType" value="newposts" onchange="updateUrl()"> נייע תגובות<br>
+      אשכולות</br>
+      <input type="radio" id="newposts" name="searchType" value="newposts" onchange="updateUrl()"> נייע תגובות</br>
       <input type="radio" id="active_topics" name="searchType" value="active_topics" onchange="updateUrl()"> אקטיווע
-      אשכולות<br>
+      אשכולות</br>
 
 
       <div class="buttons">
         <textarea id="url"
           readonly>https://www.ivelt.com/forum/search.php?st=0&sk=t&sd=d&sr=topics&search_id=unreadposts</textarea>
-        <br>
+        </br>
         <button onclick="copyToClipboard()">קאפי לינק</button>
         <button onclick="goToUrl()">גיי יעצט</button>
         <button onclick="clearState()">הייב אן פריש</button>
