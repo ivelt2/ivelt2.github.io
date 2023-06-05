@@ -114,21 +114,20 @@
       <p>קומט אריין פאר א גלעזעלע שנאפס און א גוט ווארט</p>
     </header>
     <div class="bb">
-      <h1>וועלט אויס וועלכע פארומס איר ווילט לייענען די אומגעליינטע.</h1>
-      <p>מאכט זיכער צו סעיוון די לינק אלס א בוקמארק</p>
+      <h1>וועלט אויס וועלכע פארומס איר ווילט זוכן אשכולות.</h1>
+      <p>איר קענט אוועקלייגן די לינק אלס א בוקמארק</p>
       <div class="aaa">
         <details>
-          <summary>אידישע וועלט א</summary>
+          <summary><input type="checkbox" id="158" class="Main" value="158" onchange="updateUrl()"> אידישע וועלט א<br>
+          </summary>
           <input type="checkbox" id="selectAllMain" onchange="selectAll('Main')"> וועלט אויס אלע<br>
-          <input type="checkbox" id="158" class="Main" value="158" onchange="updateUrl()">אידישע וועלט<br>
           <input type="checkbox" id="33" class="Main" value="33" onchange="updateUrl()">ברוכים הבאים<br>
           <input type="checkbox" id="189" class="Main" value="189" onchange="updateUrl()">רעוואלוציע<br>
         </details>
 
         <details>
-          <summary>נייעס</summary>
+          <summary><input type="checkbox" id="182" class="News" value="182" onchange="updateUrl()">נייעס<br></summary>
           <input type="checkbox" id="selectAllNews" onchange="selectAll('News')"> וועלט אויס אלע<br>
-          <input type="checkbox" id="182" class="News" value="182" onchange="updateUrl()">נייעס<br>
           <input type="checkbox" id="6" class="News" value="6" onchange="updateUrl()">וועלטליכע נייעס<br>
           <input type="checkbox" id="104" class="News" value="104" onchange="updateUrl()">קאראנא וויירוס<br>
           <input type="checkbox" id="183" class="News" value="183" onchange="updateUrl()">פאליטישע נייעס<br>
@@ -142,9 +141,9 @@
         </details>
 
         <details>
-          <summary>היימישע קרעטשמע</summary>
+          <summary><input type="checkbox" id="34" class="Kretc" value="34" onchange="updateUrl()">די היימישע קרעטשמע<br>
+          </summary>
           <input type="checkbox" id="selectAllKretc" onchange="selectAll('Kretc')"> וועלט אויס אלע<br>
-          <input type="checkbox" id="34" class="Kretc" value="34" onchange="updateUrl()">די היימישע קרעטשמע<br>
           <input type="checkbox" id="152" class="Kretc" value="152" onchange="updateUrl()">דעת הקהל<br>
           <input type="checkbox" id="3" class="Kretc" value="3" onchange="updateUrl()">היימישע קרעטשמע<br>
           <input type="checkbox" id="153" class="Kretc" value="153" onchange="updateUrl()">ידיעות און וויסנשאפט<br>
@@ -166,9 +165,9 @@
         </details>
 
         <details>
-          <summary>בית המדרש</summary>
+          <summary><input type="checkbox" id="35" class="BM" value="35" onchange="updateUrl()">בית המדרש דקהלתינו<br>
+          </summary>
           <input type="checkbox" id="selectAllBM" onchange="selectAll('BM')"> וועלט אויס אלע<br>
-          <input type="checkbox" id="35" class="BM" value="35" onchange="updateUrl()">בית המדרש דקהלתינו<br>
           <input type="checkbox" id="92" class="BM" value="92" onchange="updateUrl()">שיעורי הקהילות<br>
           <input type="checkbox" id="95" class="BM" value="95" onchange="updateUrl()">יסודי התורה<br>
           <input type="checkbox" id="94" class="BM" value="94" onchange="updateUrl()">זכרו - ישראל ואורייתא<br>
@@ -184,9 +183,9 @@
         </details>
 
         <details>
-          <summary>איש את רעהו יעזורו</summary>
+          <summary><input type="checkbox" id="37" class="ish" value="37" onchange="updateUrl()">איש את רעהו יעזורו<br>
+          </summary>
           <input type="checkbox" id="selectAllish" onchange="selectAll('ish')"> וועלט אויס אלע<br>
-          <input type="checkbox" id="37" class="ish" value="37" onchange="updateUrl()">איש את רעהו יעזורו<br>
           <input type="checkbox" id="25" class="ish" value="25" onchange="updateUrl()">ולאחיו יאמר חזק<br>
           <input type="checkbox" id="155" class="ish" value="155" onchange="updateUrl()">תורת הנפש<br>
           <input type="checkbox" id="159" class="ish" value="159" onchange="updateUrl()">חנוך לנער<br>
@@ -238,9 +237,10 @@
         </details>
 
         <details>
-          <summary>אידישע וועלט</summary>
+          <summary><input type="checkbox" id="33" class="Main2" value="33" onchange="updateUrl()">אידישע וועלט<br>
+          </summary>
           <input type="checkbox" id="selectAllMain2" onchange="selectAll('Main2')"> וועלט אויס אלע<br>
-          <input type="checkbox" id="33" class="Main2" value="33" onchange="updateUrl()">אידישע וועלט<br>
+
           <input type="checkbox" id="1" class="Main2" value="1" onchange="updateUrl()">אידישע וועלט<br>
           <input type="checkbox" id="105" class="Main2" value="105" onchange="updateUrl()">פארמעסטן<br>
           <input type="checkbox" id="116" class="Main2" value="116" onchange="updateUrl()">תחיית המתים קאמפיין<br>
@@ -254,10 +254,13 @@
       <input type="radio" id="subforumNo" name="subforumSearch" value="0"> ניין<br>
 
       <p> וועלט אויס וועלכע זוך</p>
-      <input type="radio" id="unreadposts" name="searchType" value="unreadposts" onchange="updateUrl()" checked> אומגעלייענטע אשכולות<br>
-      <input type="radio" id="unanswered" name="searchType" value="unanswered" onchange="updateUrl()"> אומגעענטפערטע אשכולות<br>
+      <input type="radio" id="unreadposts" name="searchType" value="unreadposts" onchange="updateUrl()" checked>
+      אומגעליינטע תגובות<br>
+      <input type="radio" id="unanswered" name="searchType" value="unanswered" onchange="updateUrl()"> אומגעענטפערטע
+      אשכולות<br>
       <input type="radio" id="newposts" name="searchType" value="newposts" onchange="updateUrl()"> נייע תגובות<br>
-      <input type="radio" id="active_topics" name="searchType" value="active_topics" onchange="updateUrl()"> אקטיווע אשכולות<br>
+      <input type="radio" id="active_topics" name="searchType" value="active_topics" onchange="updateUrl()"> אקטיווע
+      אשכולות<br>
 
 
       <div class="buttons">
@@ -277,18 +280,18 @@
     var inputs = document.querySelectorAll("input[type=checkbox], input[type=radio]");
     for (var i = 0; i < inputs.length; i++) {
 
-        localStorage.removeItem(inputs[i].id);
+      localStorage.removeItem(inputs[i].id);
 
-        if (inputs[i].type === 'checkbox') {
-            inputs[i].checked = false;
-        }
-        // Reset radio buttons to default state
-        else if (inputs[i].type === 'radio') {
-            inputs[i].checked = (inputs[i].id === 'subforumYes' || inputs[i].id === 'unreadposts');
-        }
+      if (inputs[i].type === 'checkbox') {
+        inputs[i].checked = false;
+      }
+      // Reset radio buttons to default state
+      else if (inputs[i].type === 'radio') {
+        inputs[i].checked = (inputs[i].id === 'subforumYes' || inputs[i].id === 'unreadposts');
+      }
     }
     updateUrl();
-}
+  }
 
   function updateUrl() {
     var subforumSearch = document.querySelector('input[name="subforumSearch"]:checked').value;
@@ -297,14 +300,14 @@
 
     var checkboxes = document.querySelectorAll("input[type=checkbox]");
     for (var i = 0; i < checkboxes.length; i++) {
-        localStorage.setItem(checkboxes[i].id, checkboxes[i].checked);
+      localStorage.setItem(checkboxes[i].id, checkboxes[i].checked);
 
-        if (checkboxes[i].checked) {
-            base_url += "&fid%5b%5d=" + checkboxes[i].value;
-        }
+      if (checkboxes[i].checked) {
+        base_url += "&fid%5b%5d=" + checkboxes[i].value;
+      }
     }
     document.getElementById('url').textContent = base_url;
-}
+  }
 
 
   function loadCheckboxes() {
