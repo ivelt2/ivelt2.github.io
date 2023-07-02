@@ -120,6 +120,7 @@
     <div class="bb">
       <h1>וועלט אויס וועלכע פארומס איר ווילט זוכן אשכולות.</h1>
       <p>איר קענט אוועקלייגן די לינק אלס א בוקמארק</p>
+      <button onclick="newPage()">דיינעמיק</button>
       <div class="aaa">
         <details>
           <summary><input type="checkbox" id="selectAllMain" onchange="selectAll('Main')"> אידישע וועלט א</br>
@@ -455,6 +456,13 @@
   document.getElementById('subforumYes').addEventListener('change', updateUrl);
   document.getElementById('subforumNo').addEventListener('change', updateUrl);
   window.onload = loadCheckboxes; 
+
+  function newPage() {
+  var url = document.getElementById('url').textContent;
+  window.open("./auto/index.html", '_blank');
+}
+
+
 </script>
 
 </html>
