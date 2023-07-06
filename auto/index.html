@@ -1,310 +1,416 @@
 <!DOCTYPE html>
+
 <head>
-    <title>Unread Generator</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0 auto;
-        padding: 10px;
-        height: 95vh;
-        max-width: 1190px;
-        background-color: #f4f4f4;
-        direction: rtl;
-      }
-  
-      h1 {
-        color: #333;
-      }
-  
-      textarea {
-        width: 85%;
-        height: 50px;
-        padding: 10px;
-        margin-bottom: 10px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-      }
-  
-      button {
-        color: #D31141;
-        border-color: #C7C3BF;
-        background-color: #E9E9E9;
-        background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #E9E9E9 100%);
-        padding: 2px 8px;
-        font-size: 13px;
-        font-weight: 600;
-        font-family: "Open Sans", "Droid Sans", Verdana, Arial, Helvetica;
-        text-align: center;
-        white-space: nowrap;
-        vertical-align: middle;
-        cursor: pointer;
-        border: 1px solid transparent;
-        border-radius: 4px;
-        -webkit-box-shadow: 0 0 0 1px #FFFFFF inset;
-  
-      }
-  
-      button:hover {
-  
-        border-color: #0A8ED0;
-        background-color: #FFFFFF;
-        background-image: -webkit-linear-gradient(top, #E9E9E9 0%, #FFFFFF 100%);
-        background-image: linear-gradient(to bottom, #E9E9E9 0%, #FFFFFF 100%);
-        text-shadow: 1px 1px 0 #FFFFFF, -1px -1px 0 #FFFFFF, -1px -1px 0 rgba(188, 42, 77, 0.2);
-      }
-  
-      .buttons {
-        padding: 25px;
-        margin-top: 12px;
-        background-color: #FFFFFF;
-        border-top: 15px solid #0A8ED0;
-        border-bottom: 2px solid #0A8ED0;
-        border-right: 1px solid #0A8ED0;
-        border-left: 1px solid #0A8ED0;
-        border-radius: 7px;
-        text-align: center;
-  
-      }
-  
-      textarea:hover {
-        background-color: #e5e5e5;
-        border-color: #0A8ED0;
-  
-      }
-  
-      .header {
-        background-color: #12A3EB;
-        background-image: linear-gradient(to bottom, #6ACEFF 0%, #0076B1 2px, #12A3EB 92px, #12A3EB 100%);
-        background-repeat: repeat-x;
-        color: #FFFFFF;
-        margin-bottom: 4px;
-        padding: 5px;
-        border-radius: 10px;
-      }
-  
-      .aaa {
-        border-top: 15px solid #0A8ED0;
-        border-bottom: 3px solid #0A8ED0;
-        border-right: 1px solid #0A8ED0;
-        border-left: 1px solid #0A8ED0;
-        border-radius: 7px;
-        padding: 15px;
-      }
-  
-      .bb {
-        padding-bottom: 50px;
-      }
-  
-      #logo {
-        float: right;
-        padding: 0px 15px;
-      }
-  
-      li {
-        list-style: none;
-      }
-    </style>
-  </head>
+  <title>Unread Generator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0 auto;
+      padding: 10px;
+      height: 95vh;
+      max-width: 1190px;
+      background-color: #f4f4f4;
+      direction: rtl;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    textarea {
+      width: 85%;
+      height: 50px;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    button {
+      color: #D31141;
+      border-color: #C7C3BF;
+      background-color: #E9E9E9;
+      background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #E9E9E9 100%);
+      padding: 2px 8px;
+      font-size: 13px;
+      font-weight: 600;
+      font-family: "Open Sans", "Droid Sans", Verdana, Arial, Helvetica;
+      text-align: center;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      -webkit-box-shadow: 0 0 0 1px #FFFFFF inset;
+
+    }
+
+    button:hover {
+
+      border-color: #0A8ED0;
+      background-color: #FFFFFF;
+      background-image: -webkit-linear-gradient(top, #E9E9E9 0%, #FFFFFF 100%);
+      background-image: linear-gradient(to bottom, #E9E9E9 0%, #FFFFFF 100%);
+      text-shadow: 1px 1px 0 #FFFFFF, -1px -1px 0 #FFFFFF, -1px -1px 0 rgba(188, 42, 77, 0.2);
+    }
+
+    .buttons {
+      padding: 25px;
+      margin-top: 12px;
+      background-color: #FFFFFF;
+      border-top: 15px solid #0A8ED0;
+      border-bottom: 2px solid #0A8ED0;
+      border-right: 1px solid #0A8ED0;
+      border-left: 1px solid #0A8ED0;
+      border-radius: 7px;
+      text-align: center;
+
+    }
+
+    textarea:hover {
+      background-color: #e5e5e5;
+      border-color: #0A8ED0;
+
+    }
+
+    .header {
+      background-color: #12A3EB;
+      background-image: linear-gradient(to bottom, #6ACEFF 0%, #0076B1 2px, #12A3EB 92px, #12A3EB 100%);
+      background-repeat: repeat-x;
+      color: #FFFFFF;
+      margin-bottom: 4px;
+      padding: 5px;
+      border-radius: 10px;
+    }
+
+    .aaa {
+      border-top: 15px solid #0A8ED0;
+      border-bottom: 3px solid #0A8ED0;
+      border-right: 1px solid #0A8ED0;
+      border-left: 1px solid #0A8ED0;
+      border-radius: 7px;
+      padding: 15px;
+    }
+
+    .bb {
+      padding-bottom: 50px;
+    }
+
+    #logo {
+      float: right;
+      padding: 0px 15px;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    .loading {
+      position: relative;
+      display: inline-block;
+      cursor: default;
+    }
+
+    .loading::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 70px;
+      height: 70px;
+      background-image: url(./loading.gif);
+      background-size: cover;
+    }
+
+    .loading:hover::after {
+
+
+      content: "ווארט מען זאל זיך אויפוועקן";
+      display: block;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      font-size: 12px;
+      line-height: 40px;
+      width: 120px;
+      height: 40px;
+      border-radius: 4px;
+      position: absolute;
+      top: -50px;
+      left: 50%;
+      transform: translateX(-50%);
+      pointer-events: none;
+    }
+
+
+  </style>
+</head>
+
 <body>
-    <div>
-        <header class="header">
-          <img src="https://ivelt.com/forum/ext/kfmdmsolutions/customstyle/styles/prosilver/theme/images/site_logo.png" alt="ivelt logo" id="logo">
-          <h2>אידישע וועלט פארומס</h2>
-          <p>קומט אריין פאר א גלעזעלע שנאפס און א גוט ווארט</p>
-        </header>
-        <div class="bb">
-          <h1>וועלט אויס וועלכע פארומס איר ווילט זוכן אשכולות.</h1>
-          <p>איר קענט אוועקלייגן די לינק אלס א בוקמארק</p>
-
-    <div class="checkbox-container" id="checkbox-container">
-    <!-- Checkbox elements will be dynamically added here -->
-    <p id="loadingmessage">loading....</p>
-  </div>
-
-
-  <div class="checkbox-container" id="checkbox-container">
-    <!-- Checkbox elements will be dynamically added here -->
-  </div>
-
   <div>
-    <p>זוך אין סאבפארומס?</p>
-    <input type="radio" id="subforumYes" name="subforumSearch" value="1" checked=""> יא<br>
-    <input type="radio" id="subforumNo" name="subforumSearch" value="0"> ניין<br>
+    <header class="header">
+      <img src="https://ivelt.com/forum/ext/kfmdmsolutions/customstyle/styles/prosilver/theme/images/site_logo.png"
+        alt="ivelt logo" id="logo">
+      <h2>אידישע וועלט פארומס</h2>
+      <p>קומט אריין פאר א גלעזעלע שנאפס און א גוט ווארט</p>
+    </header>
+    <div class="bb">
+      <h1>וועלט אויס וועלכע פארומס איר ווילט זוכן אשכולות.</h1>
+      <p>איר קענט אוועקלייגן די לינק אלס א בוקמארק</p>
 
-    <p> וועלט אויס וועלכע זוך</p>
-    <input type="radio" id="unreadposts" name="searchType" value="unreadposts" onchange="updateUrl()" checked="">
-    אומגעליינטע תגובות<br>
-    <input type="radio" id="unanswered" name="searchType" value="unanswered" onchange="updateUrl()"> אומגעענטפערטע
-    אשכולות<br>
-    <input type="radio" id="newposts" name="searchType" value="newposts" onchange="updateUrl()"> נייע תגובות<br>
-    <input type="radio" id="active_topics" name="searchType" value="active_topics" onchange="updateUrl()"> אקטיווע
-    אשכולות<br>
+      <div class="aaa" id="checkbox-container">
+        <!-- Checkbox elements will be dynamically added here -->
+        <p id="loadingmessage" class="loading">ווארט א רגע</p>
+      </div>
 
-    <div class="buttons">
-      <textarea id="url" readonly="">https://www.ivelt.com/forum/search.php?st=0&amp;sc=1&amp;sk=t&amp;sd=d&amp;sr=topics&amp;search_id=unreadposts</textarea>
-      <br>
-      <button onclick="copyToClipboard()">קאפי לינק</button>
-      <button onclick="goToUrl()">גיי יעצט</button>
-      <button onclick="clearState()">הייב אן פריש</button>
-    </div>
-  </div>
 
-  
-  <script>
-  // Fetch the forum data from the Glitch API
-fetch('https://melodious-gamy-level.glitch.me/')
-  .then(response => response.json())
-  .then(data => {
-    const checkboxContainer = document.getElementById('checkbox-container');
 
-    // Recursive function to generate checkbox elements with appropriate indentation
-    const generateCheckboxElements = (data, parentElement) => {
-      data.forEach(item => {
-        const listItem = document.createElement('li');
-        listItem.style.paddingRight = `${item.depth * 20}px`; // Apply indentation based on the depth
+      <div class="buttons" style="text-align: right;">
+        <p>זוך אין סאבפארומס?</p>
+        <input type="radio" id="subforumYes" name="subforumSearch" value="1" checked=""> יא<br>
+        <input type="radio" id="subforumNo" name="subforumSearch" value="0"> ניין<br>
 
-        const checkbox = document.createElement('input');
-        checkbox.type = 'checkbox';
-        checkbox.value = item.id;
-        checkbox.id = item.id;
-        checkbox.addEventListener('change', updateUrl);
+        <p> וועלט אויס וועלכע זוך</p>
+        <input type="radio" id="unreadposts" name="searchType" value="unreadposts" onchange="updateUrl()" checked="">
+        אומגעליינטע תגובות<br>
+        <input type="radio" id="unanswered" name="searchType" value="unanswered" onchange="updateUrl()"> אומגעענטפערטע
+        אשכולות<br>
+        <input type="radio" id="newposts" name="searchType" value="newposts" onchange="updateUrl()"> נייע תגובות<br>
+        <input type="radio" id="active_topics" name="searchType" value="active_topics" onchange="updateUrl()"> אקטיווע
+        אשכולות<br>
+      </div>
 
-        const label = document.createElement('label');
-        label.textContent = item.title;
+      <!-- Custom forums -->
+      <div id="PrivateFroums" class="buttons" >
+        <p> נוצט די קעסטלעך דא אונטן צו אריינלייגן די איידי פאר א פארשפארטע פארום</p>
+        <input class="pforum" type="text" id="pForum1" pattern="\d{1,3}" placeholder="איידי">
+        <input class="pforum" type="text" id="pForum2" pattern="\d{1,3}" placeholder="איידי">
+        <input class="pforum" type="text" id="pForum3" pattern="\d{1,3}" placeholder="איידי">
+      </div>
+        <div id= buttons class="buttons">
+          <textarea id="url"
+            readonly="">https://www.ivelt.com/forum/search.php?st=0&amp;sc=1&amp;sk=t&amp;sd=d&amp;sr=topics&amp;search_id=unreadposts</textarea>
+          <br>
+          <button onclick="copyToClipboard()">קאפי לינק</button>
+          <button onclick="goToUrl()">גיי יעצט</button>
+          <button onclick="clearState()">הייב אן פריש</button>
+        </div>
+      </div>
 
-        listItem.appendChild(checkbox);
-        listItem.appendChild(label);
-        listItem.appendChild(document.createElement('br'));
 
-        parentElement.appendChild(listItem);
+      <script>
+        // Fetch the forum data from the Glitch API
+        fetch('https://melodious-gamy-level.glitch.me/')
+          .then(response => response.json())
+          .then(data => {
+            const checkboxContainer = document.getElementById('checkbox-container');
 
-        if (item.subforums && item.subforums.length > 0) {
-          const subforumList = document.createElement('ul');
-          listItem.appendChild(subforumList);
+            // Recursive function to generate checkbox elements with appropriate indentation
+            const generateCheckboxElements = (data, parentElement) => {
+              data.forEach(item => {
+                const listItem = document.createElement('li');
+                listItem.style.paddingRight = `${item.depth * 20}px`; // Apply indentation based on the depth
 
-          generateCheckboxElements(item.subforums, subforumList);
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.value = item.id;
+                checkbox.id = item.id;
+                checkbox.addEventListener('change', updateUrl);
+
+                const label = document.createElement('label');
+                label.textContent = item.title;
+
+                listItem.appendChild(checkbox);
+                listItem.appendChild(label);
+                listItem.appendChild(document.createElement('br'));
+
+                parentElement.appendChild(listItem);
+
+                if (item.subforums && item.subforums.length > 0) {
+                  const subforumList = document.createElement('ul');
+                  listItem.appendChild(subforumList);
+
+                  generateCheckboxElements(item.subforums, subforumList);
+                }
+              });
+            };
+
+            const rootCheckboxContainer = document.createElement('ul');
+            checkboxContainer.appendChild(rootCheckboxContainer);
+
+            // Generate checkbox elements with appropriate indentation
+            generateCheckboxElements(data, rootCheckboxContainer);
+            loadingmessage.parentNode.removeChild(loadingmessage);
+            loadCheckboxes();
+          })
+          .catch(error => console.error(error));
+
+
+
+        function clearState() {
+          var inputs = document.querySelectorAll("input[type=checkbox], input[type=radio]");
+          for (var i = 0; i < inputs.length; i++) {
+
+            localStorage.removeItem(inputs[i].id);
+
+            if (inputs[i].type === 'checkbox') {
+              inputs[i].checked = false;
+            }
+            // Reset radio buttons to default state
+            else if (inputs[i].type === 'radio') {
+              inputs[i].checked = (inputs[i].id === 'subforumYes' || inputs[i].id === 'unreadposts');
+            }
+          }
+
+          var textFields = ['pForum1', 'pForum2', 'pForum3'];
+          textFields.forEach(function (fieldId) {
+            localStorage.removeItem(fieldId);
+            var textField = document.getElementById(fieldId);
+            if (textField) {
+              textField.value = ''; 
+            }
+          });
+
+          updateUrl();
         }
-      });
-    };
 
-    const rootCheckboxContainer = document.createElement('ul');
-    checkboxContainer.appendChild(rootCheckboxContainer);
+        function updateUrl() {
+          var subforumSearch = document.querySelector('input[name="subforumSearch"]:checked').value;
+          var searchType = document.querySelector('input[name="searchType"]:checked').value;
+          var base_url = "https://www.ivelt.com/forum/search.php?st=0&sc=" + subforumSearch + "&sk=t&sd=d&sr=topics&search_id=" + searchType;
 
-    // Generate checkbox elements with appropriate indentation
-    generateCheckboxElements(data, rootCheckboxContainer);
-    loadingmessage.parentNode.removeChild(loadingmessage);
-    loadCheckboxes();
-  })
-  .catch(error => console.error(error));
-
+          var checkboxes = document.querySelectorAll("input[type=checkbox]");
+          for (var i = 0; i < checkboxes.length; i++) {
+            localStorage.setItem(checkboxes[i].id, checkboxes[i].checked);
+            localStorage.setItem('subforumSearch', subforumSearch);
+            localStorage.setItem('searchType', searchType);
 
 
-  function clearState() {
-    var inputs = document.querySelectorAll("input[type=checkbox], input[type=radio]");
-    for (var i = 0; i < inputs.length; i++) {
-
-      localStorage.removeItem(inputs[i].id);
-
-      if (inputs[i].type === 'checkbox') {
-        inputs[i].checked = false;
-      }
-      // Reset radio buttons to default state
-      else if (inputs[i].type === 'radio') {
-        inputs[i].checked = (inputs[i].id === 'subforumYes' || inputs[i].id === 'unreadposts');
-      }
-    }
-    updateUrl();
-  }
-
-  function updateUrl() {
-    var subforumSearch = document.querySelector('input[name="subforumSearch"]:checked').value;
-    var searchType = document.querySelector('input[name="searchType"]:checked').value;
-    var base_url = "https://www.ivelt.com/forum/search.php?st=0&sc=" + subforumSearch + "&sk=t&sd=d&sr=topics&search_id=" + searchType;
-
-    var checkboxes = document.querySelectorAll("input[type=checkbox]");
-    for (var i = 0; i < checkboxes.length; i++) {
-      localStorage.setItem(checkboxes[i].id, checkboxes[i].checked);
-      localStorage.setItem('subforumSearch', subforumSearch);
-      localStorage.setItem('searchType', searchType);
-      
-
-      if (checkboxes[i].checked) {
-        base_url += "&fid%5b%5d=" + checkboxes[i].value;
-      }
-    }
-    document.getElementById('url').textContent = base_url;
-  }
-
-
-  function loadCheckboxes() {
-    var checkboxes = document.querySelectorAll("input[type=checkbox]");
-    for (var i = 0; i < checkboxes.length; i++) {
-      var isChecked = localStorage.getItem(checkboxes[i].id) == 'true' ? true : false;
-      checkboxes[i].checked = isChecked;
-    }
-
-    // Load radio button state
-    var subforumSearch = localStorage.getItem('subforumSearch');
-    if (subforumSearch !== null) {
-      document.getElementById('subforum' + (subforumSearch == '1' ? 'Yes' : 'No')).checked = true;
-    }
-
-    var searchType = localStorage.getItem('searchType');
-    if (searchType !== null) {
-  document.querySelector('input[name="searchType"][value="' + searchType + '"]').checked = true;
-}
+            if (checkboxes[i].checked) {
+              base_url += "&fid%5b%5d=" + checkboxes[i].value;
+            }
+          }
 
 
 
-    updateUrl();
-  }
+          //add option for custom forum
+          var textFields = ['pForum1', 'pForum2', 'pForum3'];
+          textFields.forEach(function (fieldId) {
+            var textField = document.getElementById(fieldId);
+            if (textField && textField.value) {
+              var value = parseInt(textField.value, 10); // Convert input value to number
+              if (value >= 0 && value <= 999) { // Check if the number is in 0 - 999 range
+                localStorage.setItem(fieldId, value); // Store to local storage
+                base_url += "&fid%5b%5d=" + value; // Add to URL
+              }
+            }
+          });
+
+          document.getElementById('url').textContent = base_url;
+        }
 
 
-  function checkAll(category) {
-    var subforumSearch = document.querySelector('input[name="subforumSearch"]:checked').value;
-    localStorage.setItem('subforumSearch', subforumSearch);
-    var isChecked = document.getElementById(category).checked;
-    var checkboxes = document.querySelectorAll("." + category);
-    for (var i = 0; i < checkboxes.length; i++) {
-      checkboxes[i].checked = isChecked;
-    }
-  }
-  function selectAll(category) {
-    var selectAllCheckbox = document.querySelector("#selectAll" + category);
-    var checkboxes = document.querySelectorAll("." + category);
+        function loadCheckboxes() {
+          var checkboxes = document.querySelectorAll("input[type=checkbox]");
+          for (var i = 0; i < checkboxes.length; i++) {
+            var isChecked = localStorage.getItem(checkboxes[i].id) == 'true' ? true : false;
+            checkboxes[i].checked = isChecked;
+          }
 
-    for (var i = 0; i < checkboxes.length; i++) {
-      checkboxes[i].checked = selectAllCheckbox.checked;
-    }
+          // Load radio button state
+          var subforumSearch = localStorage.getItem('subforumSearch');
+          if (subforumSearch !== null) {
+            document.getElementById('subforum' + (subforumSearch == '1' ? 'Yes' : 'No')).checked = true;
+          }
 
-    // Trigger the URL update
-    updateUrl();
-  }
+          var searchType = localStorage.getItem('searchType');
+          if (searchType !== null) {
+            document.querySelector('input[name="searchType"][value="' + searchType + '"]').checked = true;
+          }
 
-  function goToUrl() {
-    var url = document.getElementById('url').textContent;
-    window.open(url, '_blank');
-  }
+          //load private forums
+          var textFields = ['pForum1', 'pForum2', 'pForum3'];
+          textFields.forEach(function (fieldId) {
+            var textField = document.getElementById(fieldId);
+            if (textField) {
+              var value = localStorage.getItem(fieldId);
+              if (value !== null) { // Check if a value was stored
+                textField.value = value; // Restore the stored value
+              }
+            }
+          });
 
 
-  function copyToClipboard() {
-    var urlField = document.getElementById('url');
+          updateUrl();
+        }
 
-    // Select the text field
-    urlField.select();
-    urlField.setSelectionRange(0, 99999); // For mobile devices
 
-    // Copy the text inside the text field
-    document.execCommand("copy");
+        function checkAll(category) {
+          var subforumSearch = document.querySelector('input[name="subforumSearch"]:checked').value;
+          localStorage.setItem('subforumSearch', subforumSearch);
+          var isChecked = document.getElementById(category).checked;
+          var checkboxes = document.querySelectorAll("." + category);
+          for (var i = 0; i < checkboxes.length; i++) {
+            checkboxes[i].checked = isChecked;
+          }
+        }
+        function selectAll(category) {
+          var selectAllCheckbox = document.querySelector("#selectAll" + category);
+          var checkboxes = document.querySelectorAll("." + category);
 
-    // Alert the copied text
-    alert("Copied the URL: " + urlField.value);
-  }
+          for (var i = 0; i < checkboxes.length; i++) {
+            checkboxes[i].checked = selectAllCheckbox.checked;
+          }
 
-  document.getElementById('subforumYes').addEventListener('change', updateUrl);
-  document.getElementById('subforumNo').addEventListener('change', updateUrl);
-  //window.onload = loadCheckboxes; 
-  </script>
+          // Trigger the URL update
+          updateUrl();
+        }
+
+        function goToUrl() {
+          var url = document.getElementById('url').textContent;
+          window.open(url, '_blank');
+        }
+
+
+        function copyToClipboard() {
+          var urlField = document.getElementById('url');
+
+          // Select the text field
+          urlField.select();
+          urlField.setSelectionRange(0, 99999); // For mobile devices
+
+          // Copy the text inside the text field
+          document.execCommand("copy");
+
+          // Alert the copied text
+          alert("Copied the URL: " + urlField.value);
+        }
+
+        document.getElementById('subforumYes').addEventListener('change', updateUrl);
+        document.getElementById('subforumNo').addEventListener('change', updateUrl);
+
+        // Function to limit input to a maximum of three numeric digits
+        function limitInput(event) {
+          event.target.value = event.target.value.replace(/[^0-9]/g, '').substr(0, 3);
+        }
+
+        // Get all text fields
+        var textFields2 = ['pForum1', 'pForum2', 'pForum3'];
+        // For each text field, add an event listener for the input event
+        textFields2.forEach(function (fieldId) {
+          var textField2 = document.getElementById(fieldId);
+          if (textField2) {
+            textField2.addEventListener('input', limitInput);
+            textField2.addEventListener('blur', updateUrl);
+          }
+        });
+
+
+
+  //window.onload = loadCheckboxes;
+      </script>
 </body>
+
 </html>
